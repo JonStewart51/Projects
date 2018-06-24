@@ -135,6 +135,7 @@ naivephat.5<- naive_phat
 naivephat.5[naive_phat>=0.5]="0"
 naivephat.5[naive_phat<0.5]="1"
 
+
 cmatrixnaive.5<- confmatrix(german_test$Default, naivephat.5)
 costnaive.5<- 5000*cmatrixnaive.5$FP+ 20000*cmatrixnaive.5$FN
 costnaive.5
